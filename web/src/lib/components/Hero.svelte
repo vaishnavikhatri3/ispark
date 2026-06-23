@@ -2,8 +2,8 @@
 	// Props configuration
 	let {
 		badgeText = 'Departmental Affiliated Cell',
-		titleText = 'iSPARC',
-		subtitleText = 'Skill, Personality Advancement & Refinement Cell.',
+		titleText = 'Skill, Personality Advancement & Refinement Cell',
+		subtitleText = '',
 		descriptionText = 'Welcome to ISPARC, an official cell of the Institute of Infrastructure and Professional Studies (IIPS), DAVV. We facilitate structured extracurricular activities, personality enhancement tracks, and grading systems to foster student growth and leadership.',
 		primaryCtaText = 'Grading Matrix',
 		primaryCtaHref = '#grading-scheme',
@@ -33,9 +33,9 @@
 				</div>
 
 				<!-- Main Institutional Headline -->
-				<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#881B1B] font-serif tracking-tight leading-none">
-					{titleText}
-				</h1>
+				<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#881B1B] font-serif tracking-tight leading-none">
+	{titleText}
+</h1>
 
 				<!-- Subtitle -->
 				<h2 class="text-lg sm:text-xl font-semibold text-[#1e3a5f] font-sans tracking-tight">
