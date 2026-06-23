@@ -28,7 +28,7 @@
 			<div class="lg:col-span-7 space-y-6">
 				
 				<!-- Academic Affiliation Badge -->
-				<div class="inline-flex items-center px-3 py-1 bg-[#2563eb] rounded-sm text-[10px] font-bold tracking-widest uppercase text-white">
+				<div class="inline-flex items-center px-3 py-1 bg-[#284B63] rounded-sm text-[10px] font-bold tracking-widest uppercase text-white">
 					{badgeText}
 				</div>
 
@@ -51,13 +51,13 @@
 				<div class="flex flex-col sm:flex-row gap-3 pt-2">
 					<a
 						href={primaryCtaHref}
-						class="inline-flex items-center justify-center border-2 border-[#2563eb] text-[#2563eb] font-semibold text-xs tracking-wider uppercase px-6 py-3 hover:bg-[#2563eb] hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb] focus-visible:ring-offset-2"
+						class="inline-flex items-center justify-center border-2 border-[#284B63] text-[#284B63] font-semibold text-xs tracking-wider uppercase px-6 py-3 hover:bg-[#284B63] hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#284B63] focus-visible:ring-offset-2"
 					>
 						{primaryCtaText}
 					</a>
 					<a
 						href={secondaryCtaHref}
-						class="inline-flex items-center justify-center border-2 border-[#2563eb] text-[#2563eb] font-semibold text-xs tracking-wider uppercase px-6 py-3 hover:bg-[#2563eb] hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb] focus-visible:ring-offset-2"
+						class="inline-flex items-center justify-center border-2 border-[#284B63] text-[#284B63] font-semibold text-xs tracking-wider uppercase px-6 py-3 hover:bg-[#284B63] hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#284B63] focus-visible:ring-offset-2"
 					>
 						{secondaryCtaText}
 					</a>
@@ -75,7 +75,7 @@
 					{#each topPerformers as performer, i}
 						<div class="flex items-center justify-between py-2.5 border-b border-slate-100 last:border-b-0">
 							<div class="flex items-center gap-3">
-								<span class="w-6 h-6 rounded-full bg-[#2563eb] text-white text-xs font-bold flex items-center justify-center">
+								<span class="w-6 h-6 rounded-full bg-[#284B63] text-white text-xs font-bold flex items-center justify-center">
 									{i + 1}
 								</span>
 								<div>
@@ -83,7 +83,7 @@
 									<span class="text-xs text-slate-500 font-sans">{performer.track}</span>
 								</div>
 							</div>
-							<span class="text-sm font-bold text-[#2563eb] font-sans">{performer.points} pts</span>
+							<span class="text-sm font-bold text-[#284B63] font-sans">{performer.points} pts</span>
 						</div>
 					{/each}
 				</div>

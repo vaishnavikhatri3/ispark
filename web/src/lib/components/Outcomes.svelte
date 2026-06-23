@@ -21,7 +21,7 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 			
 			<div class="space-y-6">
-				<span class="text-[10px] font-bold tracking-[0.2em] text-[#2563eb] uppercase font-sans">
+				<span class="text-[10px] font-bold tracking-[0.2em] text-[#284B63] uppercase font-sans">
 					Grading Scheme
 				</span>
 				<h2 class="text-2xl sm:text-3xl font-bold font-serif text-[#1e3a5f] tracking-tight">
@@ -31,7 +31,7 @@
 					All student certificates and service logs are audited by the departmental committee before final grades are submitted to the university.
 				</p>
 					
-				<blockquote class="border-l-2 border-[#2563eb] pl-5 py-1">
+				<blockquote class="border-l-2 border-[#284B63] pl-5 py-1">
 					<p class="text-sm italic text-slate-700 font-sans leading-relaxed">
 						"Personality development is not merely an addition; it is an essential component of professional readiness."
 					</p>
@@ -49,7 +49,7 @@
 				<ul class="space-y-5">
 					{#each rules as rule}
 						<li class="flex items-start gap-3">
-							<span class="w-2 h-2 bg-[#2563eb] mt-1.5 shrink-0 rounded-full"></span>
+							<span class="w-2 h-2 bg-[#284B63] mt-1.5 shrink-0 rounded-full"></span>
 							<div>
 								<h4 class="text-sm font-semibold text-slate-800 font-sans">{rule.title}:</h4>
 								<p class="text-xs text-slate-500 leading-relaxed font-sans mt-1">{rule.desc}</p>
