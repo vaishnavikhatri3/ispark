@@ -11,13 +11,12 @@
 		secondaryCtaHref = '#tracks'
 	} = $props();
 
-	// Grading matrix data for the right-hand panel
-	const grades = [
-		{ range: '60+ Points', grade: 'Grade O (Outstanding)', colorClass: 'bg-emerald-50 text-emerald-800 border-emerald-200' },
-		{ range: '45 - 59 Points', grade: 'Grade A (Excellent)', colorClass: 'bg-blue-50 text-blue-800 border-blue-200' },
-		{ range: '30 - 44 Points', grade: 'Grade B (Very Good)', colorClass: 'bg-amber-50 text-amber-850 border-amber-200' },
-		{ range: '15 - 29 Points', grade: 'Grade C (Good)', colorClass: 'bg-purple-50 text-purple-800 border-purple-200' },
-		{ range: 'Under 15 Points', grade: 'Grade D (Satisfactory)', colorClass: 'bg-slate-50 text-slate-800 border-slate-200' }
+	// Top performers data
+	const topPerformers = [
+		{ name: 'Priya Sharma', points: 95, track: 'Track A' },
+		{ name: 'Rahul Verma', points: 88, track: 'Track B' },
+		{ name: 'Sneha Patel', points: 82, track: 'Track A' },
+		{ name: 'Amit Kumar', points: 78, track: 'Track B' }
 	];
 </script>
 
@@ -34,7 +33,7 @@
 				</div>
 
 				<!-- Main Institutional Headline -->
-				<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#2563eb] font-serif tracking-tight leading-none">
+				<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#284B63] font-serif tracking-tight leading-none">
 					{titleText}
 				</h1>
 
@@ -52,7 +51,7 @@
 				<div class="flex flex-col sm:flex-row gap-3 pt-2">
 					<a
 						href={primaryCtaHref}
-						class="inline-flex items-center justify-center bg-[#2563eb] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3 hover:bg-[#1d4ed8] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb] focus-visible:ring-offset-2"
+						class="inline-flex items-center justify-center border-2 border-[#2563eb] text-[#2563eb] font-semibold text-xs tracking-wider uppercase px-6 py-3 hover:bg-[#2563eb] hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb] focus-visible:ring-offset-2"
 					>
 						{primaryCtaText}
 					</a>
@@ -66,22 +65,25 @@
 
 			</div>
 
-			<!-- Right Column: Activity Grading Matrix -->
-			<div class="lg:col-span-5 bg-[#284B63] border border-slate-200 p-6 rounded-sm">
-				<h2 class="text-lg font-bold font-serif text-white mb-3">
-					Activity Grading Matrix
+			<!-- Right Column: Top Performers -->
+			<div class="lg:col-span-5 bg-white border border-slate-200 p-6 rounded-sm">
+				<h2 class="text-lg font-bold font-serif text-[#1e3a5f] mb-4">
+					Top Performers
 				</h2>
-				<p class="text-xs text-white/70 font-sans leading-relaxed mb-5 border-b border-white/20 pb-4">
-					Extracurricular points are mapped directly to grades in semester results under the DAVV guidelines.
-				</p>
 
 				<div class="space-y-3">
-					{#each grades as item}
-						<div class="flex items-center justify-between py-1.5 border-b border-white/10 last:border-b-0">
-							<span class="text-sm font-medium text-white/90 font-sans">{item.range}</span>
-							<span class="inline-flex items-center px-3 py-1 rounded-sm text-xs font-bold border {item.colorClass} tracking-wide font-sans">
-								{item.grade}
-							</span>
+					{#each topPerformers as performer, i}
+						<div class="flex items-center justify-between py-2.5 border-b border-slate-100 last:border-b-0">
+							<div class="flex items-center gap-3">
+								<span class="w-6 h-6 rounded-full bg-[#2563eb] text-white text-xs font-bold flex items-center justify-center">
+									{i + 1}
+								</span>
+								<div>
+									<span class="text-sm font-medium text-slate-800 font-sans block">{performer.name}</span>
+									<span class="text-xs text-slate-500 font-sans">{performer.track}</span>
+								</div>
+							</div>
+							<span class="text-sm font-bold text-[#2563eb] font-sans">{performer.points} pts</span>
 						</div>
 					{/each}
 				</div>
