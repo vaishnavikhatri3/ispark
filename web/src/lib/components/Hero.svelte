@@ -33,7 +33,7 @@
 				</div>
 
 				<!-- Main Institutional Headline -->
-				<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#284B63] font-serif tracking-tight leading-none">
+				<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#881B1B] font-serif tracking-tight leading-none">
 					{titleText}
 				</h1>
 
