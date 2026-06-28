@@ -28,7 +28,7 @@
   // UI Interactive States
   let isEditing = $state(false);
   let showPasswordModal = $state(false);
-  
+
   // Temp Edit Form Fields
   let editForm = $state({
     email: "",
@@ -97,7 +97,7 @@
       passwordError = "Password must be at least 6 characters.";
       return;
     }
-    
+
     // Success flow
     passwordSuccess = true;
     profile.lastPasswordChange = new Date().toLocaleDateString('en-GB', {
@@ -105,7 +105,7 @@
       month: 'short',
       year: 'numeric'
     });
-    
+
     setTimeout(() => {
       showPasswordModal = false;
       passwordSuccess = false;
@@ -123,33 +123,19 @@
     }
   }
 
-  // Reset demo state helper
-  function resetDemo() {
-    profile.dob = "-";
-    profile.photoUrl = "";
-    profile.email = "rahul.iips@gmail.com";
-    profile.mobile = "+91 98765 43210";
-    profile.gender = "Male";
-  }
+
 </script>
 
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start font-sans">
   <!-- LEFT COLUMN (cols 1-7 on desktop) -->
   <div class="lg:col-span-7 space-y-6">
-    
+
     <!-- 1. STUDENT AVATAR / SUMMARY CARD -->
     <div class="bg-white rounded-xl border border-slate-200 p-6 flex flex-col items-center relative overflow-hidden shadow-xs">
       <!-- Decor Top Line -->
       <div class="absolute top-0 left-0 right-0 h-1 bg-[#881B1B]"></div>
-      
-      <!-- Reset Demo Button for review ease -->
-      <button 
-        onclick={resetDemo}
-        class="absolute top-4 right-4 text-[10px] bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-500 font-bold px-2 py-1 rounded transition-colors"
-        title="Reset Profile to match the original under-construction reference state"
-      >
-        Reset State
-      </button>
+
+
 
       <!-- Circular Avatar -->
       <div class="w-24 h-24 rounded-full bg-[#881B1B] text-white flex items-center justify-center font-bold text-3xl border-4 border-white shadow-md shrink-0 relative overflow-hidden">
@@ -162,7 +148,7 @@
 
       <h2 class="text-xl font-bold text-[#0B1535] mt-4 font-serif">{profile.name}</h2>
       <p class="text-xs text-slate-500 font-semibold mt-1">Roll No: {profile.rollNo}</p>
-      
+
       <!-- Verified Badge -->
       <div class="mt-3 flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full text-[11px] font-bold">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5">
@@ -215,7 +201,7 @@
 
         <!-- ACTIONS ROW -->
         <div class="grid grid-cols-2 gap-3.5 mt-8 pt-6 border-t border-slate-100">
-          <button 
+          <button
             onclick={handleStartEdit}
             class="flex items-center justify-center gap-2 py-3 bg-[#0B1535] hover:bg-[#1a2b5e] text-white rounded-lg text-xs font-bold transition duration-200 shadow-xs focus:outline-none cursor-pointer"
           >
@@ -224,8 +210,8 @@
             </svg>
             Edit Profile
           </button>
-          
-          <button 
+
+          <button
             onclick={() => showPasswordModal = true}
             class="flex items-center justify-center gap-2 py-3 border border-slate-200 hover:bg-slate-50 text-[#0B1535] bg-white rounded-lg text-xs font-bold transition duration-200 shadow-xs focus:outline-none cursor-pointer"
           >
@@ -252,7 +238,7 @@
               <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Enrollment No.</span>
               <span class="font-bold text-slate-500 mt-1.5 block px-3 py-2 bg-slate-50 rounded-lg border border-slate-100">{profile.enrollmentNo}</span>
             </div>
-            
+
             <!-- Editable Items -->
             <div class="flex flex-col gap-1.5">
               <label for="edit-email" class="text-[10px] font-bold text-slate-700 tracking-wider uppercase">Email Address *</label>
@@ -302,14 +288,14 @@
 
           <!-- EDIT ACTIONS -->
           <div class="flex items-center gap-3.5 mt-8 pt-6 border-t border-slate-100">
-            <button 
+            <button
               type="button"
               onclick={handleCancelEdit}
               class="flex-1 py-3 border border-slate-200 hover:bg-slate-50 text-slate-700 bg-white rounded-lg font-bold text-xs tracking-wider uppercase transition duration-200 cursor-pointer"
             >
               Cancel
             </button>
-            <button 
+            <button
               type="submit"
               class="flex-grow py-3 bg-[#881B1B] hover:bg-[#731717] text-white rounded-lg font-bold text-xs tracking-wider uppercase transition duration-200 cursor-pointer"
             >
@@ -368,7 +354,7 @@
       </div>
 
       <div class="space-y-4 text-xs font-semibold text-slate-700">
-        
+
         <div class="flex items-center justify-between py-1">
           <div class="flex items-center gap-3">
             <!-- Icon -->
@@ -441,11 +427,11 @@
 
   <!-- RIGHT COLUMN (cols 8-12 on desktop) -->
   <div class="lg:col-span-5 space-y-6">
-    
+
     <!-- 1. PARTICIPATION OVERVIEW GRID -->
     <div class="space-y-3.5">
       <h3 class="text-xs font-bold text-slate-405 tracking-wider uppercase font-sans">Participation Overview</h3>
-      
+
       <div class="grid grid-cols-2 gap-4">
         <!-- Activities Participated -->
         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
@@ -546,7 +532,7 @@
                 <p class="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-wider">{award.points}</p>
               </div>
             </div>
-            
+
             <div class="flex items-center gap-1 text-emerald-600 text-[10px] font-extrabold uppercase tracking-wide shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5z" clip-rule="evenodd" />
@@ -616,7 +602,7 @@
 <!-- 1. CHANGE PASSWORD MODAL -->
 {#if showPasswordModal}
   <div transition:fade={{ duration: 150 }} class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-    
+
     <div
       transition:slide={{ duration: 250 }}
       class="bg-white border border-slate-200 rounded-2xl w-full max-w-md shadow-2xl overflow-hidden font-sans"
@@ -624,15 +610,15 @@
       aria-modal="true"
     >
       <div class="h-1 bg-[#881B1B]"></div>
-      
+
       <!-- Header -->
       <div class="p-6 border-b border-slate-100 flex items-center justify-between">
         <div>
           <h3 class="text-lg font-bold font-serif text-[#0B1535]">Change Account Password</h3>
           <p class="text-[10px] font-semibold text-[#6B7280] uppercase tracking-widest mt-0.5">student security portal</p>
         </div>
-        <button 
-          onclick={() => showPasswordModal = false} 
+        <button
+          onclick={() => showPasswordModal = false}
           aria-label="Close modal"
           class="p-1 rounded-lg text-slate-400 hover:bg-slate-50 hover:text-slate-600 transition-colors"
         >
