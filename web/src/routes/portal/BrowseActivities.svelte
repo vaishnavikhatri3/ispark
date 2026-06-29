@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 
 	// Define interfaces for activities
 	interface Activity {
